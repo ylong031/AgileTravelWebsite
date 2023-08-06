@@ -6,43 +6,55 @@ body {
     background-color: #f5f5f5;
 }
 
-nav {
-    background-color: #333;
-    color: #fff;
-}
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+nav{
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
-nav li {
-    margin: 0;
-    padding: 0;
+.logo{
+    color: black;
+    font-size: 28px;
 }
 
-nav a {
-    display: block;
-    padding: 15px 20px;
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a{
+    color: black;
     text-decoration: none;
-    color: #fff;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    color: #ea1538;
+    transition: .3s;
+}
+.sign-up{
+    border: none;
+    background: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
+}
+.login{
+    border: none;
+    background: black;
+    padding: 12px 30px;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    transition: .4s;
 }
 
-nav a:hover {
-    background-color: #555;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav a {
-        padding: 15px;
-    }
-}
