@@ -37,6 +37,10 @@ nav ul li a:hover{
     color: #ea1538;
     transition: .3s;
 }
+nav ul li a.clicked {
+    color: #ea1538;
+}
+
 .sign-up{
     border: none;
     background: white;
