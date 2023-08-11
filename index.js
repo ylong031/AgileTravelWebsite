@@ -21,7 +21,7 @@ const userRoutes = require('./routes/user');
 //set the app to use ejs for rendering
 app.set('view engine', 'ejs');
 
-
+app.use(express.static('img'));
 //this adds all the userRoutes to the app under the path /user
 app.use('/user', userRoutes);
 
