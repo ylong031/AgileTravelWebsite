@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link href= '/static/games.css' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="/static/style.css">
+    <title>Country Story Page</title>
 
 </head>
 <body>
@@ -34,7 +33,7 @@
                 <li><a href="/user/games">Games</a></li>
                 <li><a href="/user/about">About Us</a></li>
                 <li><a href="/user/faq">FAQ</a></li>
-                <i class="fas fa-search"></i>
+                
                 <button type="button" class="sign-up">Sign up</button>
                 <button type="button" class="login">Login</button>
             </ul>
@@ -42,24 +41,25 @@
         </nav>
     </div>
 
-    <div class="games">
-    <h1>GAMES</h1>
-
- 
-
-    <a href="https://team-100-agile.github.io/earthquake/"><img src="/earthquakeimg.png"/></a>
-   
-   
-    <a href="https://team-100-agile.github.io/Tsunami/"><img src="/tsunami.png"/></a>
-   
-    <a><img src="/snek.jpg"/></a>
-
-    <a><img src="/snek.jpg"/></a>
-
+    <h1 id="title"><%= country %></h1>
+    <div id="top-img">
+        <img src="/<%= country %>.jpg" alt="kontol">
     </div>
+    
+    <h3 id="subtitle">Share Your Travel Experience in Form of Story </h3>
+    
+    <div class="create-story-button">
+        <form action="go-to-create" method="get">
+            <button type="submit" name ="button" value="<%= country %>">Create Story</button>
+        </form>
+    </div>
+    
 
+    <% for (let i = 0; i < data.length; i++) { %>
+        <li><%= data[i].title %></li>
+        <li><%= data[i].body %></li>
+        <li><%= data[i].timestamp %></li>
+    <% } %>
+    
 </body>
-
-
-
 </html>

@@ -6,6 +6,10 @@
 
 const express = require("express");
 const router = express.Router();
+const bodyParser= require ("body-parser");
+const moment = require("moment")
+const path = require('path');
+router.use(bodyParser.urlencoded({ extended: true }));
 
 
 
@@ -34,4 +38,43 @@ router.get('/about', async (req, res, next) => {
 router.get('/faq', async (req, res, next)=> {
   res.render('faq-page');
 });
+
+router.use(express.static('resource'));
+router.get('/home2', (req,res) => {
+  res.render('user-story-page.ejs')
+})
+
+router.get('/generate-page' ,(req,res)=>{
+  const bodyValue = req.query.button
+  console.log(bodyValue)
+  db.all("SELECT * FROM Stories where country=?",[bodyValue],function(err,row){
+    if(err){
+      console.log(err)
+    }
+    else{
+      res.render('individual-story-page.ejs', {data:row,country:bodyValue})
+    }
+  })
+  
+})
+router.get('/go-to-create', (req,res)=>{
+  const bodyValue = req.query.button
+  res.render('create-user-story.ejs',{country:bodyValue})
+})
+
+router.post('/add-story', (req,res) =>{
+  const bodyValue = req.body.button
+  const title = req.body.title
+  const body = req.body.body
+  const timestamp = moment().format()
+  db.all('INSERT INTO Stories(title,body,timestamp,country) VALUES(?,?,?,?)', [title,body,timestamp,bodyValue], function(err){
+    if(err){
+      console.log(err)
+    }
+    else{
+      res.redirect('home2')
+    }
+  })
+})
+
 module.exports = router;
