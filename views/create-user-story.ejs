@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <h2 class="logo">Travel <span>Website</span> </h2>
+            <ul>
+                    <li><a href="/user/home">Home</a></li>
+                    <li><a href="/user/country">Country</a></li>
+                    <li><a href="/user/home2">Stories</a></li>
+                    <li><a href="/user/games">Games</a></li>
+                    <li><a href="/user/about">About Us</a></li>
+                    <li><a href="/user/faq">FAQ</a></li>
+                    <i class="fas fa-search"></i>
+                    <button type="button" class="sign-up">Sign up</button>
+                    <button type="button" class="login">Login</button>      
+            </ul>
+
+        </nav>
+    </div>
+    <div class="input-form">
+        <form action="add-story" method="post">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="" >
+            <label for="body">Body</label>
+            <input type="text" name="body" value="" >
+            <button type="submit" name="button" value="<%= country %>"> Submit </button>
+        </form>
+    </div>
+    
+
+</body>
+
+
+
+</html>

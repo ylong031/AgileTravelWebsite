@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="nav-bar">
+        <nav>
+            <h2 class="logo">Travel <span>Website</span> </h2>
+            <ul>
+                    <li><a href="/user/home">Home</a></li>
+                    <li><a href="/user/country">Country</a></li>
+                    <li><a href="/user/home2">Stories</a></li>
+                    <li><a href="/user/games">Games</a></li>
+                    <li><a href="/user/about">About Us</a></li>
+                    <li><a href="/user/faq">FAQ</a></li>
+                    <i class="fas fa-search"></i>
+                    <button type="button" class="sign-up">Sign up</button>
+                    <button type="button" class="login">Login</button>      
+            </ul>
+
+        </nav>
+    </div>
+
+    <div>
+        <form action="generate-page" method="get">
+            <button type="submit" name="button" value="China">China</button>
+            <button type="submit" name="button" value="Spain">Spain</button>
+            <button type="submit" name="button" value="UK">United Kingdom</button>
+            <button type="submit" name="button" value="US">United States</button>
+            <button type="submit" name="button" value="Italy">Italy</button>
+        </form>
+    </div>
+</body>
+
+
+
+</html>
