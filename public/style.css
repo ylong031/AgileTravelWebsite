@@ -148,4 +148,38 @@ body {
       transition: .4s;
   }
   
-  
+  .dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: auto;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 5px 0;
+}
+
+.dropdown-menu a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: block; 
+}
+
+.dropdown-menu a:hover {
+    color: #ea1538;
+}

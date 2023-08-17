@@ -20,6 +20,12 @@ router.get('/home',async (req, res, next) => {
 router.get('/country', async (req, res, next) => {
   res.render('individual-country-page');
 });
+router.get('/country/mexico', async (req, res, next) => {
+  res.render('Mexico');
+});
+router.get('/country/italy', async (req, res, next) => {
+  res.render('Italy');
+});
 
 router.get('/games',async (req, res, next) => {
   res.render('games-page');
