@@ -120,7 +120,18 @@
         
         function mouseClicked() {
           // If the mouse is clicked, log the current mouse position
-          console.log("Mouse Position: { x: " + mouseX + ", y: " + mouseY + " }");
+          if (mouseX > 454 && mouseX < 524 &&
+                 mouseY > 208&& mouseY < 258 ){
+                  console.log("Mouse Position: { x: " + mouseX + ", y: " + mouseY + " }");{
+                   window.location.replace("/user/country/italy")
+                  }
+                }
+          if (mouseX > 148 && mouseX < 248 &&
+                 mouseY > 231&& mouseY < 281 ){
+                  console.log("Mouse Position: { x: " + mouseX + ", y: " + mouseY + " }");{
+                   window.location.replace("/user/country/mexico")
+                  }
+                 }
         }
         </script>
 
