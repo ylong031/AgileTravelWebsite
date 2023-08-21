@@ -1,0 +1,56 @@
+start: 
+    - show airport: WITH FADE 
+    - text: Hmm... the restaurant should be around here somewhere.
+    - text: According to Google maps it should only be a 10 minute walk from where i was 
+    
+    - show waitingArea: WITH FADE CONTINUE
+    - wait: 300
+    - text: I have passed this area a few times already.
+    - text: These narrow alleys all look the same.
+    - show stranger: WITH FADE
+    - stranger says normal: Ciao! i have seen you walking aimlessly around for quite some time.
+    - stranger says normal: Looking for something? are you lost?
+    - choice:
+        - "Yes":
+            - stranger says normal: Happens to the best of us! Let me help you find your way.
+            - scene: GoodEnding
+            
+        - "No, I'll be just fine":
+            - stranger says normal: Well, enjoy your time here! If you need assistance, do not hesitate to ask.
+            - choice:
+                - "Continue with finding the restaurant":
+                    - scene: BadEnding
+                - "Ask for assistance":
+                    - scene: GoodEnding
+                    
+                    
+BadEnding:
+    - text: You politely decline the offer and decide to continue exploring on your own.
+    - text: Despite your best efforts, the narrow alleys and winding streets lead you further astray.
+    - hide stranger: WITH FADE
+    - show parkingLot: WITH FADE
+    - text: Should have asked for help from that guy.
+    - text: What a disaster...
+    - text: Exhausted and frustrated, you reluctantly admit defeat and head back to your lodging.
+    - text: Sometimes, getting lost leads to unexpected adventures, but this time it only brought disappointment.
+    
+    - show badEnd: WITH FADE
+    
+    
+GoodEnding:
+    - text: Grateful for the offer, you decide to accept the tourist's help.
+    - text: The two of you navigate the labyrinthine alleys together, exchanging stories along the way.
+    - hide stranger: WITH FADE
+    - show taxi: WITH FADE
+    - text: Finally found it
+    - text: Thanks for the help!
+    - text: The authentic aromas wafting from the restaurant fill you with anticipation for a delicious meal.
+    - text: You step inside, ready to enjoy your Italian dining experience.
+    - show goodEnd: WITH FADE
+  
+                
+            
+        
+    
+    
+    

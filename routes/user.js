@@ -80,5 +80,8 @@ router.post('/add-story', (req,res) =>{
 router.get('/MexicoNovel', async (req, res, next)=> {
   res.render('MexicoNovel');
 });
+router.get('/ItalyNovel', async (req, res, next)=> {
+  res.render('ItalyNovel');
+});
 
 module.exports = router;

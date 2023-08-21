@@ -1,0 +1,21 @@
+backgrounds:
+    airport: /assets1/backgrounds/arrival_airport.jpg
+    waitingArea: /assets1/backgrounds/waiting_area.jpg
+    parkingLot: /assets1/backgrounds/meh.jpg
+    badEnd: /assets1/backgrounds/bad_end.png
+    goodEnd: /assets1/backgrounds/congrats.jpg
+    taxi: /assets1/backgrounds/taxi.jpg
+    
+    
+    
+characters:
+    stranger:
+        y: 400
+        displayName: Stranger
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assets1/characters/stranger.png
+            
+                
+                
+                

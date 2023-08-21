@@ -39,8 +39,81 @@
 
         </nav>
     </div>
+
+    <div class="faq-container">
+        <h1>Frequently Asked Questions</h1>
+        </div>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div class="faq-section">
+            <h2>Home</h2>
+            <div class="faq-item" id="home-faq">
+                <h3>Whats the big map for?</h3>
+                <p>To navigate to the Country pages in the website</p>
+                <h3>How do I navigate to the Country page?</h3>
+                <p>To navigate to the Country page, simply click on the Countries on the map it will link you to the specified countries.</p>
+            </div>
+        </div>
+        <div class="faq-section">
+            <h2>Stories</h2>
+            <div class="faq-item" id="comments-faq">
+                <h3>How can i go to the countries story pages</h3>
+                <p>There is an option to click on the country there you can leave your stories.</p>
+                <h3>How can i upload my stories on the page</h3>
+                <p>To leave a Story, go to the "Story" page and find the Country you want to post on. There you can upload your stories .</p>
+            </div>
+        </div>
+        <div class="faq-section">
+        <div class="faq-item"id="country-faq">
+            <h2>Country</h2>
+            <h3>How can look for specific information</h3>
+            <p>There are anchors for each section on the page after the description</p>
+            <h3>How can I view the novels</h3>
+            <p>There are certain scenarios on the trivia page which will link you to the novels to experience a simulated example of the situations.</p>
+        </div>
+    </div>
+    <div class="faq-section">
+        <div class="faq-item" id="games-faq">
+            <h2>Games</h2>
+            <h3>How to play the games?</h3>
+            <p>The games contain instructions in each individual game.</p>
+            <h3>It takes forever to load?</h3>
+            <p>Thats your problem, be patient :C.</p>
+        </div>
+    </div>
 </body>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById("search-bar");
+        const faqItems = document.querySelectorAll(".faq-item");
+        let currentMatchIndex = -1;
 
+        searchInput.addEventListener("keydown", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); 
+
+                const searchTerm = searchInput.value.toLowerCase();
+
+                if (currentMatchIndex >= 0) {
+                    faqItems[currentMatchIndex].classList.remove("highlight");
+                }
+
+                currentMatchIndex = -1;
+
+                for (let i = 0; i < faqItems.length; i++) {
+                    const faqItem = faqItems[i];
+                    const faqText = faqItem.textContent.toLowerCase();
+
+                    if (faqText.includes(searchTerm)) {
+                        currentMatchIndex = i;
+                        faqItem.classList.add("highlight");
+                        faqItem.scrollIntoView({ behavior: "smooth", block: "start" });
+                        break;
+                    }
+                }
+            }
+        });
+    });
+</script>
 
 </html>

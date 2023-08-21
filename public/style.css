@@ -183,3 +183,11 @@ body {
 .dropdown-menu a:hover {
     color: #ea1538;
 }
+
+.highlight {
+  background-color: yellow;
+}
+
+.faq-container {
+  text-align: center;
+}
