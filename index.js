@@ -15,6 +15,14 @@ global.db = new sqlite3.Database('./database.db',function(err){
   }
 });
 app.use('/static', express.static(path.join(__dirname, 'public')));
+app.use('/img', express.static(path.join(__dirname, 'img')));
+app.use('/assets', express.static(path.join(__dirname, 'assets')));
+app.use('/user/assets/gui', express.static(path.join(__dirname, 'user/assets/gui')));
+app.use('/user/assets/backgrounds', express.static(path.join(__dirname, 'user/assets/backgrounds')));
+app.use('/user/assets/characters', express.static(path.join(__dirname, 'user/assets/characters')));
+
+// Serve static files from the 'story' directory
+app.use('/story', express.static(path.join(__dirname, 'story')));
 
 const userRoutes = require('./routes/user');
 
@@ -24,6 +32,31 @@ app.set('view engine', 'ejs');
 app.use(express.static('img'));
 //this adds all the userRoutes to the app under the path /user
 app.use('/user', userRoutes);
+
+app.use(express.static('assets'));
+//this adds all the userRoutes to the app under the path /user
+app.use('/user', userRoutes);
+
+app.use(express.static('story'));
+//this adds all the userRoutes to the app under the path /user
+app.use('/user', userRoutes);
+
+
+app.use('/story', (req, res, next) => {
+  if (req.url.endsWith('.js')) {
+    res.type('application/javascript');
+  }
+  next();
+});
+
+app.use('/assets', express.static(path.join(__dirname, 'assets'), {
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.css')) {
+      res.setHeader('Content-Type', 'text/css');
+    }
+  }
+}));
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
