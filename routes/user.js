@@ -23,6 +23,11 @@ router.get('/country', async (req, res, next) => {
 router.get('/country/mexico', async (req, res, next) => {
   res.render('Mexico');
 });
+
+router.get('/country/thailand', async (req, res, next) => {
+  res.render('Thailand');
+});
+
 router.get('/country/italy', async (req, res, next) => {
   res.render('Italy');
 });
