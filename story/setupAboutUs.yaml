@@ -1,0 +1,27 @@
+backgrounds:
+    airport: /assetsAboutUs/backgrounds/arrival_airport.jpg
+    waitingArea: /assetsAboutUs/backgrounds/waiting_area.jpg
+    parkingLot: /assetsAboutUs/backgrounds/meh.jpg
+    badEnd: /assetsAboutUs/backgrounds/bad_end.png
+    goodEnd: /assetsAboutUs/backgrounds/congrats.jpg
+    taxi: /assetsAboutUs/backgrounds/taxi.jpg
+    skem: /assetsAboutUs/backgrounds/skem.jpg
+    
+    
+    
+characters:
+    stranger:
+        y: 400
+        displayName: Travel Dude
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assetsAboutUs/characters/stranger.png
+    stranger2:
+        y: 400
+        displayName: Travel Dude
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assetsAboutUs/characters/stranger_2.png     
+                
+                
+                

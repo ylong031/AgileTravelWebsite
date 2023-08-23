@@ -1,0 +1,22 @@
+start: 
+    - show airport: WITH FADE 
+    - show stranger: WITH FADE
+    - stranger says normal: Welcome to our travel website
+    - stranger says normal: We are a group of computer science students from the University of London. Our goal is to provide you with the best resources and information to make your travel experiences safe and unforgettable.
+    - hide stranger: WITH FADE
+    - show waitingArea: WITH FADE CONTINUE
+    - wait: 300
+    - show stranger2: WITH FADE
+    - text: The Map at the homepage will allow you to navigate to the countries by clicking on them.
+    - show taxi: WITH FADE CONTINUE
+    - text: Play games to simulate what to do in natural disasters!
+    - show skem: WITH FADE CONTINUE 
+    - text: Read novels to simulate real life situations!
+    - hide stranger2: WITH FADE                    
+    - show airport: WITH FADE 
+    - show stranger: WITH FADE 
+    - text: We hope you enjoy your stay!
+  
+    
+    
+    
