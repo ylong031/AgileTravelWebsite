@@ -1,14 +1,24 @@
-a img {
-    display:inline-block;
+Body img
+{
+    height:500px;
+    width:80%;
+}
+#container img
+{
+
     height: 300px; 
     width: 300px;
+}
+#container{
+    display:inline-block;
+  
     margin:20px;
 }
+
+
 
 Body
 {
     text-align: center;
-
-
 }
 
