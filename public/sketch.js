@@ -30,7 +30,7 @@ var img;
   }
   
   function setup() {
-    var canvas=createCanvas(img.width, img.height);
+    var canvas = createCanvas(img.width, img.height);
     canvas.parent('canvas-container');
     image(img, 0, 0);
     logPositions();
