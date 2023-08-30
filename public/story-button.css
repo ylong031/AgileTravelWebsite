@@ -15,12 +15,13 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-    width: calc(50% - 50px); /* Adjust the width for each grid item */
-    height: 140px; /* Adjust the height for each grid item */
+    width: calc(50% - 50px); 
+    height: 140px;
     margin-bottom: 20px;
   }
   
   .overlay {
+    border-radius: 10px;
     position: absolute;
     top: 0;
     left: 0;
@@ -36,6 +37,7 @@ body{
   }
   
   img {
+    border-radius: 10px;
     position: absolute;
     object-fit: cover;
     width: 100%;
@@ -71,6 +73,7 @@ body{
   }
   
   .button  button{
+    
     background-color: #fdfbfb;
     border-color: transparent;
     position: absolute;
