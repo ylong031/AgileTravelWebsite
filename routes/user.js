@@ -33,6 +33,10 @@ router.get('/country/thailand', async (req, res, next) => {
   res.render('Thailand');
 });
 
+router.get('/country/turkey', async (req, res, next) => {
+  res.render('Turkey');
+});
+
 router.get('/country/italy', async (req, res, next) => {
   res.render('Italy');
 });
