@@ -66,7 +66,6 @@ router.get('/home2', (req,res) => {
 
 router.get('/generate-page' ,(req,res)=>{
   const bodyValue = req.query.button
-  console.log(bodyValue)
   db.all("SELECT * FROM Stories where country=?",[bodyValue],function(err,row){
     if(err){
       console.log(err)
@@ -86,8 +85,10 @@ router.post('/add-story', (req,res) =>{
   const bodyValue = req.body.button
   const title = req.body.title
   const body = req.body.body
-  const timestamp = moment().format()
-  db.all('INSERT INTO Stories(title,body,timestamp,country) VALUES(?,?,?,?)', [title,body,timestamp,bodyValue], function(err){
+  const name = req.body.name
+  const timestamp = moment();
+  const timestamp2 = timestamp.format('YYYY-MM-DD HH:mm:ss')
+  db.all('INSERT INTO Stories(title,user,body,timestamp,country) VALUES(?,?,?,?,?)', [title,name,body,timestamp2,bodyValue], function(err){
     if(err){
       console.log(err)
     }

@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/ind-story-page.css">
+
     <title>Country Story Page</title>
 
 </head>
@@ -41,25 +43,32 @@
         </nav>
     </div>
 
-    <h1 id="title"><%= country %></h1>
-    <div id="top-img">
+    <div class="top-img">
         <img src="/<%= country %>.jpg" alt="">
+        <h1 id="title"><%= country %></h1>
+        <h3 id="subtitle">Share Your Travel Experience in Form of Story </h3>
     </div>
-    
-    <h3 id="subtitle">Share Your Travel Experience in Form of Story </h3>
-    
-    <div class="create-story-button">
+    <div class="story-button">
         <form action="go-to-create" method="get">
-            <button type="submit" name ="button" value="<%= country %>">Create Story</button>
+            <button class="create-story-button" type="submit" name ="button" value="<%= country %>">Create Story</button>
         </form>
+    </div>
+    <div class="story-container">
+        <% for (let i = 0; i < data.length; i++) { %>
+            <div class="story-content">
+                <li class="title"><b><%= data[i].title %></b></li>
+                <li class="name"><b>Story By: <%= data[i].user %></b></li>
+                <li class="story-body"><%= data[i].body %></li>
+                <li class="timestamp"><%= data[i].timestamp %></li>
+            </div>
+        <% } %>
     </div>
     
 
-    <% for (let i = 0; i < data.length; i++) { %>
-        <li><%= data[i].title %></li>
-        <li><%= data[i].body %></li>
-        <li><%= data[i].timestamp %></li>
-    <% } %>
+    
+    
+
+   
     
 </body>
 </html>

@@ -46,14 +46,13 @@ body{
   }
   
   .title {
-   
     position: absolute;
     width: 100%;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     font-weight: 700;
-    font-size: 18px; /* Adjust the font size as needed */
+    font-size: 18px;
     text-align: center;
     text-transform: uppercase;
     color: transparent;
