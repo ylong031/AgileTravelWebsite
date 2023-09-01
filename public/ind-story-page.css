@@ -1,3 +1,7 @@
+body{
+    font-family: Arial, sans-serif;
+}
+
 .top-img{
     width: 600px; /* Adjust the width as needed */
     height: auto;
@@ -86,4 +90,62 @@
     border-style: solid;
     border-radius: 5px;
     padding: 10px;
+}
+
+.input-form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* Change from "row" to "column" to stack elements vertically */
+    max-width: 300px; /* Adjust the maximum width as needed */
+    margin-left: 150px 
+}
+
+.input-form form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+.input-form label {
+    margin-bottom: 5px; /* Add spacing between labels and inputs */
+}
+
+.input-form input {
+    padding: 5px;
+    margin-bottom: 10px; /* Add spacing between input fields */
+}
+
+.input-form button {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    transition: background-color 0.35s ease-in-out;
+}
+.input-form button:hover{
+    
+    background-color: #eeebeb;
+    color: #000000;
+    border-color: #ffffff;
+    border-style: none;
+    transition: background-color 0.35s ease-in-out;
+
+  } 
+
+.input-form textarea{
+    margin-bottom: 10px;
+    resize: none;
+}
+.input-form{
+    margin-bottom: 50px;
+}
+.decor img{
+    width: 50%; /* Set the width to cover half of the page */
+    height: 80%;
+    position: absolute;
+    top: 200px;
+    left:500px;
+    object-fit: contain;
+    background-color: rgb(2, 2, 2); /* Replace 'yourColor' with your desired color code */
+  
 }
