@@ -1,0 +1,21 @@
+backgrounds:
+    airport: /assetsChina/backgrounds/arrival_airport.jpg
+    waitingArea: /assetsChina/backgrounds/waiting_area.jpg
+    parkingLot: /assetsChina/backgrounds/meh.jpg
+    badEnd: /assetsChina/backgrounds/bad_end.png
+    goodEnd: /assetsChina/backgrounds/congrats.jpg
+    taxi: /assetsChina/backgrounds/taxi.jpg
+    
+    
+    
+characters:
+    stranger:
+        y: 400
+        displayName: Stranger
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assetsChina/characters/stranger.png
+            
+                
+                
+                

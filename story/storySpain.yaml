@@ -1,0 +1,42 @@
+start:
+    - show streets: WITH FADE
+    - text: What a beautiful morning.
+    - text: Its my first day here, what should I do?
+    - text: Hmmmmm.
+    - text: Maybe I should get a breakfast first.
+
+    - show stranger: WITH FADE
+    - stranger says normal: Hey there!
+    - text: Hi, can I help you?
+    - stranger says normal: What a beautiful hair!!
+    - text: Thanks!
+    - stranger says normal: I know its a bit weird, but is it okay if we take a selfie, I need to show it to my friend
+    - choice: 
+        - "Sure let's take selfie":
+            - stranger says normal: Thanks!!
+            - hide stranger : WITH FADE
+            - scene : BadEnding
+        - "Sorry I got things to do":
+            - stranger says normal: Wait!!
+            - hide stranger : WITH FADE
+            - scene: GoodEnding
+
+BadEnding:
+    - show stall: WITH FADE
+    - text : Wow, Im starving.
+    - text : All of these look great!
+    - text : Where is my wallet!?
+    - text : Im sure that I had my wallet!!
+    - text : THAT GUY!!
+    - show badEnd : WITH FADE
+
+
+GoodEnding:
+    - show stall: WITH FADE
+    - text : Wow, Im starving.
+    - text : All of these look great!
+    - text : One of this please!
+    - show goodEnd : WITH FADE
+
+
+

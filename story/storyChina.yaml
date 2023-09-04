@@ -1,0 +1,61 @@
+start: 
+    - show airport: WITH FADE 
+    - text: Finally I arrived at China, It has been a dream of mine!!
+    - text: Better take a taxi to the hotel.
+    
+    - show waitingArea: WITH FADE CONTINUE
+    - wait: 300
+    - text: Where is the waiting area for taxi? 
+    - text: I should have research it before.
+    - show stranger: WITH FADE
+    - stranger says normal: Hi there!
+    - stranger says normal: Are you looking for a taxi?
+    - choice:
+        - "Yes":
+            - stranger says normal: What a great timing, come follow me to my cab, Ill give you a good price.
+            - scene: BadEnding
+            
+        - "No, I am waiting for someone":
+            - stranger says normal: Just follow me, Ill give you a cheap ride.
+            - choice:
+                - "Go with him":
+                    - scene: BadEnding
+                - "Keep finding the Taxi area":
+                    - scene: GoodEnding
+                    
+                    
+BadEnding:
+    - text: Okay then, where is your car?
+    - stranger says normal: hm its near the parking lot, come just follow me.
+    - show parkingLot: WITH FADE
+    - stranger says normal: here you can put you luggage inside the trunk.
+    - stranger says normal: I have a back problem so help me okay.
+    - text: Okay
+    - text: You put your luggage inside the trunk
+    - stranger says normal: Ill reverse the car first, because its hard for you to get in
+    - text: oh no im ok
+    - stranger says normal: No no no no it's okay.
+    - hide stranger: WITH FADE
+    - wait: 50
+    - text: the taxi driver reverse the car and go to the exit without you*
+    - text: HEY!! WAIT UP!! HEYYY!
+    - text: You got left behind and your luggage stolen
+    
+    - show badEnd: WITH FADE
+    
+    
+GoodEnding:
+    - text: Its okay, my friend will be here soon
+    - text: You left*
+    - hide stranger: WITH FADE
+    - show taxi: WITH FADE
+    - text: Finally! I found it
+    - text: That was a close call
+    - show goodEnd: WITH FADE
+  
+                
+            
+        
+    
+    
+    

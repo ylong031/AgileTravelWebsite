@@ -1,0 +1,16 @@
+backgrounds:
+    stall : /assetsSpain/backgrounds/streetFoodSpain.jpg
+    streets: /assetsSpain/backgrounds/streetSpain.jpg
+    badEnd : /assetsSpain/backgrounds/bad_end.png
+    goodEnd: /assetsSpain/backgrounds/congrats.jpg
+    
+characters:
+    stranger:
+      y: 400
+      displayName: Stranger
+      speechColour: "#ca90cf"
+      looks:
+          normal: /assetsChina/characters/Stranger.png     
+              
+                
+                

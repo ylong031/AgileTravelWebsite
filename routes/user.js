@@ -102,6 +102,13 @@ router.get('/MexicoNovel', async (req, res, next)=> {
 router.get('/ItalyNovel', async (req, res, next)=> {
   res.render('ItalyNovel');
 });
+router.get('/ChinaNovel', async (req, res, next)=> {
+  res.render('ChinaNovel');
+});
+router.get('/SpainNovel', async (req, res, next)=> {
+  res.render('SpainNovel');
+});
+
 router.get('/ThaiNovel', async (req, res, next)=> {
   res.render('ThaiNovel');
 });
