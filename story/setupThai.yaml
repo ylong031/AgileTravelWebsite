@@ -1,0 +1,20 @@
+backgrounds:
+    airport: /assetsThai/backgrounds/arrival_airport.jpg
+    waitingArea: /assetsThai/backgrounds/waiting_area.jpg
+    parkingLot: /assetsThai/backgrounds/meh.jpg
+    badEnd: /assetsThai/backgrounds/bad_end.png
+    goodEnd: /assetsThai/backgrounds/congrats.jpg
+    taxi: /assetsThai/backgrounds/taxi.jpg
+    skem: /assetsThai/backgrounds/skem.jpg
+    
+    
+    
+characters:
+    stranger:
+        y: 400
+        displayName: TukTuk Driver
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assets1/characters/stranger.png
+                
+                

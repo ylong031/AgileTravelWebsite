@@ -1,0 +1,43 @@
+start: 
+    - show airport: WITH FADE 
+    - text: You find yourself strolling through the vibrant streets of Istanbul, taking in the sights and sounds of this bustling city.
+    - text: As you walk, you notice an older man diligently polishing a pair of shoes on the sidewalk.
+    - wait: 300
+    - show waitingArea: WITH FADE CONTINUE
+    - wait: 300
+    - show stranger: WITH FADE
+    - stranger says normal:  Excuse me, would you like your shoes to shine like new?
+    - choice:
+        - "Decline the offer and continue walking":
+                - scene: GoodEnding
+        - "Agree to the shoe polish":
+                - scene: BadEnding    
+                    
+                    
+BadEnding:
+  - text: Sure!!
+  - show parkingLot: WITH FADE
+  - text: The shoe polisher starts working on your shoes with dedication, and you appreciate the effort.
+  - text: Suddenly, the shoe polisher deliberately throws his brush in your way, making you uncomfortable.
+  - text: HEY!!
+  - stranger says normal: Sorry.
+  - text: The shoe polisher, seemingly apologetic, offers to continue cleaning your shoes.
+  - stranger says normal: Your shoes look amazing now. That will be a small fee of $50.
+  - text: You are taken aback by the unexpectedly high amount he is requesting for a shoe polish.
+  - text: You realize that this might be a part of a scam.
+  - hide stranger: WITH FADE
+  - show badEnd: WITH FADE
+    
+    
+GoodEnding:
+  - text: You politely decline the offer, not feeling the need for a shoe polish at the moment.
+  - stranger says normal: Very well, have a good day.
+  - hide stranger: WITH FADE
+  - text: You continue your walk, leaving the shoe polisher behind.
+  - show goodEnd: WITH FADE
+  
+                
+            
+
+    
+    

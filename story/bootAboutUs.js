@@ -20,7 +20,7 @@ const RenJSConfig =  {
     }
   },
   'fonts': '/assets1/gui/fonts.css',
-  'guiConfig': '/story/GUI.yaml',
+  'guiConfig': '/story/guiAboutUs.yaml',
   storyConfig: '/story/Config.yaml',
   storySetup: '/story/SetupAboutUs.yaml',
   'storyText': [

@@ -1,0 +1,21 @@
+backgrounds:
+    airport: /assetsTurkey/backgrounds/arrival_airport.jpg
+    waitingArea: /assetsTurkey/backgrounds/waiting_area.jpg
+    parkingLot: /assetsTurkey/backgrounds/meh.jpg
+    badEnd: /assetsTurkey/backgrounds/bad_end.png
+    goodEnd: /assetsTurkey/backgrounds/congrats.jpg
+    taxi: /assetsTurkey/backgrounds/taxi.jpg
+    skem: /assetsTurkey/backgrounds/skem.jpg
+    
+    
+characters:
+    stranger:
+        y: 400
+        displayName: ShoePolisher
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assets/characters/stranger.png
+            
+                
+                
+                

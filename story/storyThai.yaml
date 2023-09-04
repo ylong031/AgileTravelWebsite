@@ -1,0 +1,47 @@
+start: 
+    - show airport: WITH FADE 
+    - text: You find yourself in a bustling foreign city, eager to explore its sights and culture.
+    - text: As you step out of your hotel, you notice colorful tuk-tuks, taxis, and tour buses lining the streets.
+    - text: You decide to take a tuk-tuk to your first destination, a famous temple.
+    - show waitingArea: WITH FADE CONTINUE
+    - wait: 300
+    - show stranger: WITH FADE
+    - stranger says normal: Hello, my friend! You want to see the best sights in the city?
+    - text: Yes, please take me to the famous temple.
+    - stranger says normal: Of course! I can also show you some hidden gems along the way for a few extra baht. What do you say?
+    - text: Sure
+    - choice:
+                - "Stick to the temple only":
+                    - scene: GoodEnding
+                - "Agree to the sightseeing":
+                    - scene: BadEnding    
+                    
+                    
+BadEnding:
+  - text: Sure!!
+  - hide stranger: WITH FADE
+  - text: The tuk-tuk driver takes you on a meandering route, showing you various shops and attractions.
+  - text: Eventually, you end up at a gem store, and the driver insists you should check it out.
+  - show parkingLot: WITH FADE
+  - text: You start feeling uneasy about this unexpected stop.
+  - text: Curiosity gets the better of you, and you decide to step into the gem store.
+  - text: Inside, the salespeople are quite persuasive, and they start showing you expensive jewelry.
+  - text: You start to feel pressured to make a purchase.
+  - text: Be wary of offers to visit random locations from modes of transports while travelling overseas.
+  - show badEnd: WITH FADE
+    
+    
+GoodEnding:
+  - text: You decide to stick to your original plan and only visit the temple.
+  - text: You give the tuk-tuk driver clear and specific instructions about how to arrive at your destination.
+  - show taxi: WITH FADE
+  - stranger says normal: Alright, temple it is! Sit back and enjoy the ride.
+  - hide stranger: WITH FADE
+  - text: During the ride, you keep an eye on the route to ensure you are heading in the right direction.
+  - show goodEnd: WITH FADE
+  
+                
+            
+
+    
+    
