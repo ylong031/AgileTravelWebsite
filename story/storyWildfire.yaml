@@ -1,0 +1,55 @@
+start: 
+    - show airport: WITH FADE 
+    - text: You find yourself deep in the heart of a dense forest, surrounded by the peaceful serenity of nature.
+    - text: As you explore the winding trails, you notice something alarming in the distance a raging wildfire, rapidly approaching your location.
+    - text: You have a few items with you water, clothes, a lighter, and some wood. You need to use these items to slow down the fire so you can escape.
+    - show waitingArea: WITH FADE CONTINUE
+    - text: Panic sets in as the wildfire moves closer, the flames crackling and smoke billowing ominously.
+    - text: You realize that escaping the inferno is a race against time and that your survival depends on the few items you have with you water, clothes, a lighter, and some wood.
+    - choice:
+        - "Run Backwards":
+            - show parkingLot: WITH FADE CONTINUE
+            - text: You decide to turn and run in the opposite direction of the approaching fire, hoping to find safety.
+            - text: As you sprint backward, you realize the fire is too fast. overwhelm you, and you succumb to the flames.
+            - scene: BadEnding
+            
+        - "Run Into Burnt Zones":
+            - show skem: WITH FADE CONTINUE
+            - text: You opt to run toward areas that have already been consumed by the fire, hoping they might offer some temporary respite.
+            - text: After standing in the burnt zone, you contemplate your next move.  
+            - choice:
+                - "Spray Water Around":
+                    - show taxi: WITH FADE CONTINUE
+                    - text: You use your water supply to spray the surrounding area, creating a damp barrier to slow down the approaching flames
+                    - choice:
+                        - "Run As Far As You Can":
+                            - show out: WITH FADE CONTINUE
+                            - text: You keep running as far as your strength allows, putting as much distance as possible between you and the wildfire.
+                            - text: Exhausted but determined, you finally escape the fire and find safety.
+                            - scene: GoodEnding
+                        
+                        - "Wait For Fire To Pass":
+                            - show parkingLot: WITH FADE CONTINUE
+                            - text: You choose to remain in your controlled burn area and wait for the wildfire to pass around you.
+                            - text: Unfortunately, the fire is too intense and heat are too much to bear.
+                            - scene: BadEnding
+                        
+                - "Soak Clothes in Water and Lay Around":
+                    - show parkingLot: WITH FADE CONTINUE
+                    - text: You decide to soak your clothes in water and lay them out on the ground, hoping this will protect you from the flames
+                    - text: Unfortunately, your makeshift wet blanket offers little protection. The heat is too intense, and you suffer severe burns.
+                    - scene: BadEnding
+                    
+                    
+BadEnding:    
+    - show badEnd: WITH FADE
+    
+    
+GoodEnding:
+    - show goodEnd: WITH FADE
+  
+                
+            
+
+    
+    

@@ -1,0 +1,21 @@
+backgrounds:
+    airport: /assetsWildfire/backgrounds/arrival_airport.jpg
+    waitingArea: /assetsWildfire/backgrounds/waiting_area.jpg
+    parkingLot: /assetsWildfire/backgrounds/meh.jpg
+    badEnd: /assetsWildfire/backgrounds/bad_end.png
+    goodEnd: /assetsWildfire/backgrounds/congrats.jpg
+    taxi: /assetsWildfire/backgrounds/taxi.jpg
+    skem: /assetsWildfire/backgrounds/skem.jpg
+    out: /assetsWildfire/backgrounds/out.jpg
+    
+characters:
+    stranger:
+        y: 400
+        displayName: Shopkeeper
+        speechColour: "#ca90cf"
+        looks:
+            normal: /assetsWildfire/characters/stranger.png
+            
+                
+                
+                

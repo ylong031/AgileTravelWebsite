@@ -115,4 +115,8 @@ router.get('/ThaiNovel', async (req, res, next)=> {
 router.get('/TurkeyNovel', async (req, res, next)=> {
   res.render('TurkeyNovel');
 });
+
+router.get('/WildfireNovel', async (req, res, next)=> {
+  res.render('WildfireNovel');
+});
 module.exports = router;
