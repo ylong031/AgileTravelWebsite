@@ -99,16 +99,17 @@ body {
       position:sticky;
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding-top: 40px;
-      padding-left: 10%;
+      justify-content: space-evenly;
       padding-right: 10%;
       z-index: 999;
+      background-color: rgb(255, 252, 228);
+
   }
   
   .logo{
       color: black;
       font-size: 28px;
+      justify-content: ;
   }
   
   nav ul li{
@@ -128,27 +129,6 @@ body {
   }
   nav ul li a.clicked {
       color: #ea1538;
-  }
-  
-  .sign-up{
-      border: none;
-      background: white;
-      padding: 12px 30px;
-      border-radius: 30px;
-      color: black;
-      font-weight: bold;
-      font-size: 15px;
-      transition: .4s;
-  }
-  .login{
-      border: none;
-      background: black;
-      padding: 12px 30px;
-      border-radius: 30px;
-      color: white;
-      font-weight: bold;
-      font-size: 15px;
-      transition: .4s;
   }
   
   .dropdown {
@@ -195,3 +175,54 @@ body {
   text-align: center;
 }
 
+
+.subtitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shortInfo{
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: 50px;
+  margin-right: 50px; 
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+
+.shortInfo .imgInfo{
+  width: 40%;
+  height: auto;
+  align-items: center;
+  padding: 10px;
+
+}
+
+.imgInfo img{
+  border-radius: 10px;
+}
+.cont1, .cont3{
+  display: flex;
+  justify-content:space-evenly;
+} 
+.cont1 .para1, .cont3 .para3{
+  width: 50%;
+  
+} 
+.cont2{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content:space-evenly;
+}
+
+.cont2 .para2{
+  width:50%
+}
+
+.tutorial{
+  display: flex;
+  justify-content: center;
+}
