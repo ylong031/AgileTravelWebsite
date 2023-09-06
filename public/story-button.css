@@ -35,7 +35,13 @@ body{
     display: block;
     background: rgba(0, 0, 0, .3);
   }
-  
+  .logos img {
+    width: 50px; /* Adjust the width to your desired size */
+    height: 50px; /* Adjust the height to your desired size */
+    border-radius: 0; /* Remove border-radius for .logos img */
+    position: static; /* Reset position property if necessary */
+    object-fit: contain;
+} 
   img {
     border-radius: 10px;
     position: absolute;
@@ -98,3 +104,4 @@ body{
   .opening{
     text-align: center;
   }
+

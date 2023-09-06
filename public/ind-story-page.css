@@ -149,3 +149,8 @@ body{
     background-color: rgb(2, 2, 2); /* Replace 'yourColor' with your desired color code */
   
 }
+
+.logos img {
+    width: 1%; /* Set the width to cover half of the page */
+    height: 1%;
+}

@@ -44,6 +44,9 @@ router.get('/country/china', async (req, res, next) => {
 router.get('/country/spain', async (req, res, next) => {
   res.render('Spain');
 });
+router.get('/country/usa', async (req, res, next) => {
+  res.render('Usa');
+});
 
 router.get('/games',async (req, res, next) => {
   res.render('games-page');
