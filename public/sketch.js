@@ -40,7 +40,7 @@ var img;
     // Display the map image
     image(img, 0, 0);
   
-    // Draw the image of each country/country
+    // Draw the image of each country
     for (let country in countrysData) {
       if (isMouseOverCountry(countrysData[country])) {
         displayCountryImage(country, countrysData[country]);
@@ -50,20 +50,30 @@ var img;
   }
   
   function isMouseOverCountry(countryData) {
-    // Check if the mouse is within the bounding box of the country
+    // Check if the mouse is within the country
     return mouseX > countryData.x && mouseX < countryData.x + countryData.width &&
            mouseY > countryData.y && mouseY < countryData.y + countryData.height;
   }
   
   function displayCountryImage(country, countryData) {
     image(countryImages[country], countryData.x, countryData.y, countryData.width, countryData.height);
-  
-    // You can also display the country/country name if you want.
+    let boxWidth = textWidth(country) + 10; 
+    let boxHeight = 20; 
+    let boxX = countryData.x + (countryData.width - boxWidth) / 2;
+    let boxY = countryData.y + countryData.height;
+
+ 
+    fill(255);
+    noStroke(); 
+    rect(boxX, boxY, boxWidth, boxHeight);
+    
+    textStyle(BOLD);
+    
     fill(0); 
     noStroke();
-    textSize(14);
+    textSize(18);
     textAlign(CENTER, CENTER);
-    text(country, countryData.x + countryData.width / 2, countryData.y + countryData.height / 2);
+    text(country, boxX + boxWidth / 2, boxY + boxHeight / 2);
   }
   
   
@@ -76,7 +86,7 @@ var img;
   
   function mouseClicked() {
     console.log("Mouse Position: { x: " + mouseX + ", y: " + mouseY + " }");
-    // If the mouse is clicked, log the current mouse position
+    // log to find positions
     if (mouseX > 585 && mouseX < 645 &&
            mouseY > 299&& mouseY < 340 ){
             console.log("Mouse Position: { x: " + mouseX + ", y: " + mouseY + " }");{
