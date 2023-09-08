@@ -272,11 +272,10 @@ margin-left: 14%;
 
 .imgCont{
   display: flex;
-
   align-content:center;
   height: 400px;
   width: 100%;
-  margin-left: 150px;
+  margin-left: 7.5%;
 }
 
 .pict img{
