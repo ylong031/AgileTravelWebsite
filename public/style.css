@@ -275,14 +275,13 @@ margin-left: 14%;
   align-content:center;
   height: 400px;
   width: 100%;
-  margin-left: 7.5%;
+  margin-left: 17.5%;
 }
 
 .pict img{
   object-fit: cover;
   height: 400px;
   width: 100px;
-
 }
 
 .pict img {
