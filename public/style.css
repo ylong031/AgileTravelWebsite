@@ -270,3 +270,26 @@ margin-left: 14%;
   border-radius: 5px;
 }
 
+.imgCont{
+  display: flex;
+
+  align-content:center;
+  height: 400px;
+  width: 100%;
+  margin-left: 150px;
+}
+
+.pict img{
+  object-fit: cover;
+  height: 400px;
+  width: 100px;
+
+}
+
+.pict img {
+  transition: transform 0.3s ease;
+}
+
+.pict:hover img {
+  transform: scale(1.1); 
+}
