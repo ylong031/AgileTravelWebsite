@@ -68,7 +68,6 @@ var img;
     rect(boxX, boxY, boxWidth, boxHeight);
     
     textStyle(BOLD);
-    
   
     fill(0); 
     noStroke();
