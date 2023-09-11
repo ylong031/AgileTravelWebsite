@@ -69,6 +69,7 @@ var img;
     
     textStyle(BOLD);
     
+  
     fill(0); 
     noStroke();
     textSize(18);
